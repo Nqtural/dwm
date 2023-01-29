@@ -1,13 +1,21 @@
 /* See LICENSE file for copyright and license details. */
 
+/*
+Screenshot commands
+*/
+static const char *screenshot[] = {"maim /home/$USER/Pictures/screenshots/$(date +%d-%m-%y_%H-%M-%S).png", NULL };
+static const char *screenshot_copy[] = {"maim", " | xclip -selection clipboard -t image/png", NULL };
+
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=12" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[] = {
+    "monospace:size=12", "Font Awesome 5 Free Solid:size=12", "Font Awesome 5 Free Regular:size=12"
+ };
+static const char dmenufont[]       = "monospace:size=12";
 
 static const char col_rosewater[]	= "#f5e0dc";
 static const char col_flamingo[]	= "#f2cdcd";
@@ -96,11 +104,11 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = term2cmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,                       XK_b,      togglebar,      {0} },
     { MODKEY|ShiftMask,             XK_l,      rotatestack,    {.i = +1 } },
     { MODKEY|ShiftMask,             XK_h,      rotatestack,    {.i = -1 } },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_k,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_j,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
