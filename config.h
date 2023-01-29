@@ -1,11 +1,5 @@
 /* See LICENSE file for copyright and license details. */
 
-/*
-Screenshot commands
-*/
-static const char *screenshot[] = {"maim /home/$USER/Pictures/screenshots/$(date +%d-%m-%y_%H-%M-%S).png", NULL };
-static const char *screenshot_copy[] = {"maim", " | xclip -selection clipboard -t image/png", NULL };
-
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 15;        /* gaps between windows */
