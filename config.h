@@ -7,21 +7,21 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[] = {
-    "monospace:size=12", "Font Awesome 5 Free Solid:size=12", "Font Awesome 5 Free Regular:size=12"
+    "monospace:size=13", "Font Awesome 5 Free Solid:size=12", "Font Awesome 5 Free Regular:size=12"
  };
-static const char dmenufont[]       = "monospace:size=12";
+static const char dmenufont[]       = "monospace:size=13";
 
 static const char col_rosewater[]	= "#f5e0dc";
 static const char col_flamingo[]	= "#f2cdcd";
 static const char col_pink[]		= "#f5c2e7";
 static const char col_mauve[]		= "#cba6f7";
-static const char col_red[]		= "#f38ba8";
+static const char col_red[]		    = "#f38ba8";
 static const char col_maroon[]		= "#eba0ac";
 static const char col_peach[]		= "#fab387";
 static const char col_yellow[]		= "#f9e2af";
 static const char col_green[]		= "#a6e3a1";
 static const char col_teal[]		= "#94e2d5";
-static const char col_sky[]		= "#89dceb";
+static const char col_sky[]	    	= "#89dceb";
 static const char col_sapphire[]	= "#74c7ec";
 static const char col_blue[]		= "#89b4fa";
 static const char col_lavender[]	= "#b4befe";
@@ -45,11 +45,11 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "一", "二", "三", "四", "五" };
-static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
+static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九", "九" };
+static const unsigned int ulinepad	    = 5;	/* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
 static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
-static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
+static const int ulineall               = 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 static const Rule rules[] = {
 	/* xprop(1):
