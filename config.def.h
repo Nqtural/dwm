@@ -10,28 +10,28 @@ static const int topbar                 = 1;          /* 0 means bottom bar */
 static const int user_bh                = 12;          /* 2 is the default spacing around the bar's font */
 static const char *fonts[]              = { "JetBrainsMonoNerdFontMono-Regular:size=10" };
 static const char dmenufont[]           = "monospace:size=10";
-static const char col_gray1[]           = "#2e3440";
-static const char col_gray2[]           = "#3b4252";
-static const char col_gray3[]           = "#4c566a";
-static const char col_gray4[]           = "#eceff4";
-static const char col_accent[]          = "#81a1c1";
+static const char col_pri_bg[]          = "#171219";
+static const char col_sec_bg[]          = "#2b272e";
+static const char col_pri_fg[]          = "#d5dbc5";
+static const char col_sec_fg[]          = "#f1f8e1";
+static const char col_accent[]          = "#2874b6";
 static const unsigned int baralpha      = OPAQUE;
 static const unsigned int borderalpha   = OPAQUE;
 static const char *colors[][3]          = {
 	/*               fg             bg          border   */
-	[SchemeNorm] = { col_gray4,     col_gray1,  col_gray2 },
-	[SchemeSel]  = { col_accent,    col_gray1,  col_accent  },
+	[SchemeNorm] = { col_pri_fg,    col_pri_bg,  col_sec_bg },
+	[SchemeSel]  = { col_accent,    col_pri_bg,  col_accent  },
 };
 static const unsigned int alphas[][3]   = {
     /*               fg         bg          border*/
     [SchemeNorm] = { OPAQUE,    baralpha,   borderalpha },
-	[SchemeSel]  = { OPAQUE,    baralpha,   borderalpha },
+    [SchemeSel]  = { OPAQUE,    baralpha,   borderalpha },
 };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-static const char ptagf[] = "[%s: %s]";	/* format of a tag label */
+static const char ptagf[] = "[%s: %s]";	    /* format of a tag label */
 static const char etagf[] = "[%s]";	    /* format of an empty tag */
 static const int lcaselbl = 0;		    /* 1 means make tag label lowercase */	
 
@@ -45,9 +45,9 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.5;     /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;       /* number of clients in master area */
-static const int resizehints = 1;       /* 1 means respect size hints in tiled resizals */
+static const float mfact        = 0.5;  /* factor of master area size [0.05..0.95] */
+static const int nmaster        = 1;    /* number of clients in master area */
+static const int resizehints    = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1;    /* 1 will force focus on the fullscreen window */
 
 	/* { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 }, */
@@ -71,7 +71,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_accent, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_pri_bg, "-nf", col_pri_fg, "-sb", col_accent, "-sf", col_sec_fg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
