@@ -8,7 +8,10 @@ static const unsigned int snap          = 16;         /* snap pixel */
 static const int showbar                = 1;          /* 0 means no bar */
 static const int topbar                 = 1;          /* 0 means bottom bar */
 static const int user_bh                = 12;          /* 2 is the default spacing around the bar's font */
-static const char *fonts[]              = { "JetBrainsMonoNerdFontMono-Regular:size=10" };
+static const char *fonts[]              = {
+    "SourceCodePro-Regular:size=10",
+    "JetBrainsMonoNerdFontMono-Regular:size=12"
+};
 static const char dmenufont[]           = "monospace:size=10";
 static const char col_pri_bg[]          = "#171219";
 static const char col_sec_bg[]          = "#2b272e";
